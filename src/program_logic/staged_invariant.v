@@ -356,10 +356,10 @@ Qed.
 
 Lemma staged_value_into_disc k k2 mj2 E γ P Q Qr :
   staged_value k k2 mj2 E γ Q Qr P -∗
-  <disc> staged_value_disc k2 mj2 γ Q Qr P.
+  staged_value_disc k2 mj2 γ Q Qr P.
 Proof.
   iDestruct 1 as (??) "(Hp1&Hp2&#Hinv&_)".
-  iModIntro. iExists _, _. by iFrame.
+  iExists _, _. by iFrame.
 Qed.
 
 Lemma staged_inv_disc_open_crash k mj E γ P Q Qr:
